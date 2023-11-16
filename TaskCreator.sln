@@ -5,11 +5,13 @@ VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskCreator", "TaskCreator\TaskCreator.csproj", "{7AD96021-F3CB-445C-BE70-A524206A462A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskCreator.Domain", "TaskCreator.Domain\TaskCreator.Domain.csproj", "{1B6592F5-5DAB-4DC4-B5D1-CCDDEFE3B71C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskCreator.Domain", "TaskCreator.Domain\TaskCreator.Domain.csproj", "{1B6592F5-5DAB-4DC4-B5D1-CCDDEFE3B71C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{947FBB69-FF43-403E-A2B3-29BA726CCAF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskCreator.DDD", "TaskCreator.DDD\TaskCreator.DDD.csproj", "{75109EC3-BB86-49F7-9151-5C2A7DA78C87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskCreator.DDD", "TaskCreator.DDD\TaskCreator.DDD.csproj", "{75109EC3-BB86-49F7-9151-5C2A7DA78C87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskCreator.Application.Contracts", "TaskCreator.Application.Contracts\TaskCreator.Application.Contracts.csproj", "{6A6FF191-AA1D-4625-ACF8-D809C4A050FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{75109EC3-BB86-49F7-9151-5C2A7DA78C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75109EC3-BB86-49F7-9151-5C2A7DA78C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75109EC3-BB86-49F7-9151-5C2A7DA78C87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A6FF191-AA1D-4625-ACF8-D809C4A050FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A6FF191-AA1D-4625-ACF8-D809C4A050FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A6FF191-AA1D-4625-ACF8-D809C4A050FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A6FF191-AA1D-4625-ACF8-D809C4A050FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
