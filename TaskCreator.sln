@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskCreator", "TaskCreator\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskCreator.Domain", "TaskCreator.Domain\TaskCreator.Domain.csproj", "{1B6592F5-5DAB-4DC4-B5D1-CCDDEFE3B71C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{947FBB69-FF43-403E-A2B3-29BA726CCAF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskCreator.DDD", "TaskCreator.DDD\TaskCreator.DDD.csproj", "{75109EC3-BB86-49F7-9151-5C2A7DA78C87}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +25,16 @@ Global
 		{1B6592F5-5DAB-4DC4-B5D1-CCDDEFE3B71C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B6592F5-5DAB-4DC4-B5D1-CCDDEFE3B71C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B6592F5-5DAB-4DC4-B5D1-CCDDEFE3B71C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75109EC3-BB86-49F7-9151-5C2A7DA78C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75109EC3-BB86-49F7-9151-5C2A7DA78C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75109EC3-BB86-49F7-9151-5C2A7DA78C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75109EC3-BB86-49F7-9151-5C2A7DA78C87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{75109EC3-BB86-49F7-9151-5C2A7DA78C87} = {947FBB69-FF43-403E-A2B3-29BA726CCAF7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AD929FB6-4855-4ADA-94C4-9BC446A89A46}
