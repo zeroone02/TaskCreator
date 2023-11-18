@@ -1,7 +1,7 @@
-﻿using TaskCreator.DDD;
+﻿using TaskCreator.DDD.Application.Contracts;
 
 namespace TaskCreator.Application.Contracts;
-public class SideTaskDto : Entity<int>
+public class SideTaskDto : EntityDto<int>
 {
     public int MainTaskId { get; set; }
     public MainTaskDto? MainTask { get; set; }

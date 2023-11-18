@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TaskCreator.DDD.Application.Contracts\TaskCreator.DDD.Application.Contracts.csproj" />
     <ProjectReference Include="..\TaskCreator.DDD\TaskCreator.DDD.csproj" />
   </ItemGroup>
 
