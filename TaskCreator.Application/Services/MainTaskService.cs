@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using TaskCreator.Application.Contracts;
 using TaskCreator.DDD;
-using TaskCreator.DDD.Application.Contracts;
 using TaskCreator.Domain;
 
 namespace TaskCreator.Application;
