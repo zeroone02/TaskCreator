@@ -11,7 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TaskCreator.Application.Contracts\TaskCreator.Application.Contracts.csproj" />
     <ProjectReference Include="..\TaskCreator.DDD.Application.Contracts\TaskCreator.DDD.Application.Contracts.csproj" />
+    <ProjectReference Include="..\TaskCreator.Domain\TaskCreator.Domain.csproj" />
   </ItemGroup>
 
 </Project>
