@@ -1,6 +1,10 @@
+using AutoMapper;
 using DotnetWorld.TaskCreator.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using TaskCreator.Application;
+using TaskCreator.Application.Contracts;
 using TaskCreator.DDD;
+using TaskCreator.Domain;
 
 public class Program
 {
@@ -39,5 +43,18 @@ public class Program
     private static void ConfigureApplicationServices(IServiceCollection services)
     {
         services.AddControllersWithViews();
+        services.AddTransient<IMainTaskService, MainTaskService>();
+        services.AddTransient<ISideTaskService, SideTaskService>();
+        services.AddTransient<UnitOfWork>();
+        services.AddTransient<IRepository<MainTask, int>, Repository<MainTask, int>>();
+        services.AddTransient<IRepository<SideTask, int>, Repository<SideTask, int>>();
+
+        var mapperConfig = new MapperConfiguration(mc =>
+        {
+            mc.AddProfile(new TaskCreatorApplicationObjectMapper());
+        });
+
+        IMapper mapper = mapperConfig.CreateMapper();
+        services.AddSingleton(mapper);
     }
 }
