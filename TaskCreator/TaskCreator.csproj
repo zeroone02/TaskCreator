@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TaskCreator.Application\TaskCreator.Application.csproj" />
     <ProjectReference Include="..\TaskCreator.DDD\TaskCreator.DDD.csproj" />
     <ProjectReference Include="..\TaskCreator.EntityFrameworkCore\TaskCreator.EntityFrameworkCore.csproj" />
   </ItemGroup>
