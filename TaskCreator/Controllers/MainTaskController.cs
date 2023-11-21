@@ -4,8 +4,7 @@ using TaskCreator.Application;
 using TaskCreator.Application.Contracts;
 
 namespace TaskCreator.Controllers;
-[Route("api/mainTask")]
-[ApiController]
+
 public class MainTaskController : Controller
 {
     private readonly IMainTaskService _mainTaskService;
@@ -29,18 +28,14 @@ public class MainTaskController : Controller
     [HttpPost]
     public async Task<IActionResult> MainTaskCreate(MainTaskCreateDto mainTaskCreateDto)
     {
+        var mainTaskCreate = await _mainTaskService.CreateAsync(mainTaskCreateDto);
         return View();
     }
     public async Task<IActionResult> MainTaskDelete(int id)
     {
-        return NotFound();
-    }
-
-    [HttpPost]
-    public async Task<IActionResult> MainTaskDelete(MainTaskDto productDto)
-    {
-        
-
+        await _mainTaskService.DeleteAsync(id);
         return View();
     }
+
+   
 }
