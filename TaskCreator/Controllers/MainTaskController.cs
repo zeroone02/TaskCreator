@@ -17,7 +17,7 @@ public class MainTaskController : Controller
     public async Task<IActionResult> MainTaskIndex()
     {
         var mainTaskDtos = await _mainTaskService.GetListAsync();
-        return View();
+        return View(mainTaskDtos);
     }
     //будет показывать поля для ввода maintask
     public async Task<IActionResult> MainTaskCreate()
@@ -29,7 +29,7 @@ public class MainTaskController : Controller
     public async Task<IActionResult> MainTaskCreate(MainTaskCreateDto mainTaskCreateDto)
     {
         var mainTaskCreate = await _mainTaskService.CreateAsync(mainTaskCreateDto);
-        return View();
+        return RedirectToAction(nameof(MainTaskIndex));
     }
     public async Task<IActionResult> MainTaskDelete(int id)
     {
