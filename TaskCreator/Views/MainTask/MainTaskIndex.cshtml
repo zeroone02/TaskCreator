@@ -1,5 +1,43 @@
-﻿<div class="text-align: center">
-    <div class="col-6 text-end">
-        <a asp-action="ProductCreate" class="btn btn-outline-primary"><i class="bi bi-plus-square"></i> Create New Task</a>
+﻿@using TaskCreator.Application.Contracts;
+@model IEnumerable<MainTaskDto>
+
+
+<form>
+    <div class="text-center">
+        <a asp-action="MainTaskCreate" class="btn btn-primary">Create New Task</a>
+        <div class="container row">
+            
+            @foreach (var mainTask in Model)
+            {
+                <ol class="list-group">
+                     <li>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="p-0 my-3 border rounded">
+                        <div class="card">
+                            <div class="card">
+                                 <p3 class="card-title text-dark-50  py-2">@mainTask.Name</p3>
+                            </div>
+                            <div class="card">
+                                <p3 class="card-title text-dark-50  py-2">@mainTask.Description</p3>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <a asp-action="MainTaskDelete" asp-route-id="@mainTask.Id"
+                                       class="btn btn-danger form-control">Delete</a>
+                                </div>
+                            </div>
+                            <div class="flex-column">
+                                <div class="col">
+                                    <a asp-action="MainTaskCreate" 
+                                       class="btn btn-success form-control">Create</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </li>
+                </ol>
+            }
+        </div>
     </div>
-</div>
+</form>

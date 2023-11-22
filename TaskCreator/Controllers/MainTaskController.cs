@@ -17,7 +17,7 @@ public class MainTaskController : Controller
     public async Task<IActionResult> MainTaskIndex()
     {
         var mainTaskDtos = await _mainTaskService.GetListAsync();
-        return View();
+        return View(mainTaskDtos);
     }
     //будет показывать поля для ввода maintask
     public async Task<IActionResult> MainTaskCreate()
