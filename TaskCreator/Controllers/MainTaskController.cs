@@ -34,7 +34,7 @@ public class MainTaskController : Controller
     public async Task<IActionResult> MainTaskDelete(int id)
     {
         await _mainTaskService.DeleteAsync(id);
-        return View();
+        return RedirectToAction(nameof(MainTaskIndex));
     }
 
    
