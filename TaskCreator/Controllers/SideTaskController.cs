@@ -10,13 +10,28 @@ public class SideTaskController : Controller
     {
         _sideTaskService = sideTaskService;
     }
+    [HttpGet]
     public async Task<IActionResult> SideTaskIndex(int id)
     {
         var sideTaskDtos = await _sideTaskService.GetListAsync();
         var res = sideTaskDtos.Where(x => x.Id == id);
-        return View(res);
+        if (sideTaskDtos.Count != 0)
+        {
+            return View(res);
+        }
+        else 
+        { 
+            return RedirectToAction("CreateFirstSideTask",id);
+        }
     }
-    public async Task<IActionResult> SideTaskCreate(int id)
+    [HttpGet]
+    public async Task<IActionResult> CreateFirstSideTask(int id)
+    {
+        var sideTask = new SideTaskCreateDto { Id = id,Name = "waddaw" };
+        return View(sideTask);
+    }
+
+    public async Task<IActionResult> SideTaskCreate()
     {
         return View();
     }

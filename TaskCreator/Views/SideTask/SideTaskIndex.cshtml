@@ -1,34 +1,38 @@
 ﻿@using TaskCreator.Application.Contracts;
 @model IEnumerable<SideTaskDto>
 
+@if(Model != null)
+{
+    <form>
+        <div class="text-center">
+            <a asp-action="SideTaskCreate" asp-route-id="@Model.First().Id" class="btn btn-primary">Create New SideTask</a>
+            <div class="container row">
 
-<form>
-    <div class="text-center">
-        <a asp-action="MainTaskCreate" class="btn btn-primary">Create New SideTask</a>
-        <div class="container row">
-
-            @foreach (var sideTask in Model)
-            {
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="p-0 my-3 border rounded">
-                        <div class="card">
+                @foreach (var sideTask in Model)
+                {
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="p-0 my-3 border rounded">
                             <div class="card">
-                                <p3 class="card-title text-dark-50  py-2">@sideTask.Name</p3>
-                            </div>
-                            <div class="card">
-                                <p3 class="card-title text-dark-50  py-2">@sideTask.Description</p3>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <a asp-action="MainTaskDelete" asp-route-id="@sideTask.Id"
-                                       class="btn btn-danger form-control">Delete</a>
+                                <div class="card">
+                                    <p3 class="card-title text-dark-50  py-2">@sideTask.Name</p3>
                                 </div>
+                                <div class="card">
+                                    <p3 class="card-title text-dark-50  py-2">@sideTask.Description</p3>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <a asp-action="MainTaskDelete" asp-route-id="@sideTask.Id"
+                                           class="btn btn-danger form-control">Delete</a>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
-                </div>
 
-            }
+                }
+            </div>
         </div>
-    </div>
-</form>
+    </form>
+}
+

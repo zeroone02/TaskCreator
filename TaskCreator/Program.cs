@@ -20,7 +20,7 @@ public class Program
         ConfigureApplicationServices(builder.Services);
 
         var app = builder.Build();
-
+        app.MapRazorPages();
         if (!app.Environment.IsDevelopment())
         {
             app.UseExceptionHandler("/Home/Error");
@@ -33,7 +33,7 @@ public class Program
         app.UseRouting();
 
         app.UseAuthorization();
-
+       
         app.MapControllerRoute(
             name: "default",
             pattern: "{controller=Home}/{action=Index}/{id?}");
@@ -48,7 +48,7 @@ public class Program
         services.AddTransient<UnitOfWork>();
         services.AddTransient<IRepository<MainTask, int>, Repository<MainTask, int>>();
         services.AddTransient<IRepository<SideTask, int>, Repository<SideTask, int>>();
-
+        services.AddRazorPages();
         var mapperConfig = new MapperConfiguration(mc =>
         {
             mc.AddProfile(new TaskCreatorApplicationObjectMapper());
